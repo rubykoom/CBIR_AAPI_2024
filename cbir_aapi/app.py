@@ -303,15 +303,21 @@ def retrieve_image(img_query, feature_extractor, n_imgs=12):
     """
     if feature_extractor == 'Feature map CNN':
         embeddings = model_feature_extractor1(img_query)
+        if embeddings is None:
+            return None
         indexer = faiss.read_index(os.path.join(DB_PATH, 'feat_extract_1'))
 
     elif feature_extractor == 'Bag of Visual Words':
         embeddings = model_feature_extractor2(img_query)
+        if embeddings is None:
+            return None
         indexer = faiss.read_index(os.path.join(DB_PATH, 'feat_extract_2'))
 
     elif feature_extractor == 'Autoencoder':
         # Specific preprocessing for autoencoder
         embeddings = model_feature_extractor3(img_query)
+        if embeddings is None:
+            return None
         embeddings = embeddings.reshape(1, -1)
         indexer = faiss.read_index(os.path.join(DB_PATH, 'feat_extract_3'))
 
@@ -320,10 +326,14 @@ def retrieve_image(img_query, feature_extractor, n_imgs=12):
 
     elif feature_extractor == 'Raw pixels':
         embeddings = model_feature_extractor4(img_query)
+        if embeddings is None:
+            return None
         indexer = faiss.read_index(os.path.join(DB_PATH, 'feat_extract_4'))
 
     elif feature_extractor == 'Histogram':
         embeddings = model_feature_extractor5(img_query)
+        if embeddings is None:
+            return None
         indexer = faiss.read_index(os.path.join(DB_PATH, 'feat_extract_5'))
 
     vector = np.float32(embeddings)
@@ -480,6 +490,9 @@ def main():
             start = time.time()
 
             retriev = retrieve_image(cropped_img, option, n_imgs=12)
+            if not np.any(retriev):
+                st.error("Error: No retrieved images found.")
+                return
             image_list = get_image_list()
 
             end = time.time()
