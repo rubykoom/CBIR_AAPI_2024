@@ -491,7 +491,11 @@ def main():
 
             retriev = retrieve_image(cropped_img, option, n_imgs=12)
             if not np.any(retriev):
+<<<<<<< HEAD
                 placeholder.error("ERROR: No retrieved images found.") # Show error message 
+=======
+                st.error("Error: No retrieved images found.")
+>>>>>>> adaeb44e4862ea5a4ac87b2fc1bec94772d0f159
                 return
             image_list = get_image_list()
 
