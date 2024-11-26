@@ -1,6 +1,6 @@
 # CBIR - Content-Based Image Retrieval
 
-This project implements a CBIR system using fruit images and various visual feature extraction methods, such as colour histograms, raw pixels, Bag of Words (BoW), autoencoder, and VGG19 feature maps. Extracted features are indexed with FAISS to retrieve images similar to a query. The solution includes a web interface to visualise results.
+This project implements a CBIR system using fruit images and various visual feature extraction methods, such as colour histograms, raw pixels, Bag of Words (BoW), autoencoder, and VGG19 feature maps. Extracted features are indexed with FAISS to retrieve images similar to a query. The solution includes a web interface to visualize results.
 
 ##  :file_folder: File Structure
 ```
