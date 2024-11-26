@@ -92,10 +92,15 @@ def model_feature_extractor1(img_query):
     Returns:
         numpy.ndarray: Vector de características extraído.
     """
-    # Load the model
-    vgg19_model = vgg19.VGG19(weights='imagenet')
-    base_model = Model(inputs=vgg19_model.inputs, outputs=vgg19_model.get_layer('block5_conv4').output)
-    
+    try:
+        # Load the model
+        vgg19_model = vgg19.VGG19(weights='imagenet')
+        base_model = Model(inputs=vgg19_model.inputs, outputs=vgg19_model.get_layer('block5_conv4').output)
+        
+    except Exception as e:
+        print("Error al cargar el modelo:", e)
+        return None
+
     # Preprocess the image
     img = preprocess_img_cnn(img_query)
 
