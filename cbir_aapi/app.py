@@ -45,20 +45,25 @@ def preprocess_img_cnn(img_query):
     Returns:
         numpy.ndarray: Imagen preprocesada con dimensión de lote añadida.
     """
-    # Resize and preprocess the image
-    img_query = img_query.resize((224, 224))
-    image = np.asarray(img_query)
+    try:
+        # Resize and preprocess the image
+        img_query = img_query.resize((224, 224))
+        image = np.asarray(img_query)
+        
+        # Ensure the image has 3 channels
+        if image.ndim == 2:
+            image = np.stack((image,) * 3, axis=-1) 
+        
+        image = image[:, :, :3]  # Keep only the first 3 channels if there are more
+        
+        image_prepos = preprocess_input(image)
+        image_def = np.expand_dims(image_prepos, axis=0)  # Add batch dimension
+        
+        return image_def
     
-    # Ensure the image has 3 channels
-    if image.ndim == 2:
-        image = np.stack((image,) * 3, axis=-1) 
-    
-    image = image[:, :, :3]  # Keep only the first 3 channels if there are more
-    
-    image_prepos = preprocess_input(image)
-    image_def = np.expand_dims(image_prepos, axis=0)  # Add batch dimension
-    
-    return image_def
+    except:
+        raise ValueError("La imagen de entrada es None.")
+
 
 
 def get_image_list():
@@ -180,14 +185,21 @@ def model_feature_extractor3(img_query):
         numpy.ndarray: Vector de características extraído.
     """
     filename = 'autoencoder_model.keras'
-    autoencoder = load_model(filename)
-    # Load the model
+    
+    try:
+        # Load the model
+        autoencoder = load_model(filename)
+        
+    except Exception as e:
+        print("Error al cargar el modelo:", e)
+        return None
+    
     encoder = Model(inputs=autoencoder.input, outputs=autoencoder.get_layer('conv2d_5').output)
     
     # Resize image
     img_query = img_query.resize((224, 224))
     image = np.asarray(img_query)
-    
+        
     # Ensure that the image has 3 channels (RGB)
     if image.shape[-1] != 3:
         # Convert to 3 channels if necessary
@@ -195,10 +207,14 @@ def model_feature_extractor3(img_query):
 
     # Add batch dimension
     image = np.expand_dims(image, axis=0)
-    
+        
     # Get the feature vector
-    feature_vector = encoder.predict(image)
-
+    try:
+        feature_vector = encoder.predict(image)
+    except Exception as e:
+        print("Error al predecir con el modelo:", e)
+        return None
+    
     return feature_vector
 
 def model_feature_extractor4(img_query):
