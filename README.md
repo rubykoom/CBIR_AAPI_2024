@@ -1,2 +1,151 @@
-# rubykoom-CBIR_AAPI_2024
-Repository containing our proyect about an implementation of a CBIR system
+# CBIR - Content-Based Image Retrieval
+
+This project implements a CBIR system using fruit images and various visual feature extraction methods, such as colour histograms, raw pixels, Bag of Words (BoW), autoencoder, and VGG19 feature maps. Extracted features are indexed with FAISS to retrieve images similar to a query. The solution includes a web interface to visualise results.
+
+##  :file_folder: File Structure
+```
+.
+├── code
+│   ├── Extractor 1 - CNN
+│   │   ├── Extractor 1_img_retrieval.py
+│   │   └── feat_extract_1
+│   ├── Extractor 2 - BoW
+│   │   ├── codebook.npy
+│   │   ├── Extractor 2_img_retrieval.py
+│   │   └── feat_extract_2
+│   ├── Extractor 3 - Autoencoder
+│   │   ├── autoencoder_model.keras
+│   │   ├── Extractor 3 - Autoencoder_img_retrieval.py
+│   │   ├── Extractor 3 - Autoencoder
+│   │   └── feat_extract_3
+│   ├── Extractor 4 - Raw Pixels
+│   │   ├── Extractor 4_img_retrieval.py
+│   │   └── feat_extract_4
+│   ├── Extractor 5 - Color Histogram
+│   │   ├── Extractor 5_img_retrieval.py
+│   │   └── feat_extract_5
+│   ├── Preprocessing
+│   │   ├── Fruits
+│   │   ├── Fruits_Preprocessed
+│   │   ├── db.csv
+│   │   └── Preprocessing_CBIR.py
+├── cbir_aapi
+│   ├── database
+│   │   ├── db.csv
+│   │   ├── feat_extract_1
+│   │   ├── feat_extract_2
+│   │   ├── feat_extract_3
+│   │   ├── feat_extract_4
+│   │   └── feat_extract_5
+│   ├── images
+│   ├── app.py
+│   ├── autoencoder_model.keras
+│   ├── codebook.npy
+│   └── requirements.txt
+└── README.md
+```
+
+## :page_facing_up:Folder description
+ - **`code/`**: it contains all the developed code for the project:
+	- **`Extractor 1 - CNN/`**:  it contains the script `Extractor 1_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
+	- **`Extractor 2 - BoW/`**:  it contains the script `Extractor 2_img_retrieval.py` for this method and the FAISS feature extraction index. Moreover, the `codebook.npy` is obtained once the script has been run and it is used during retrieval. In order to run it properly, directory should be changed as appropiate.		
+	- **`Extractor 3 - Autoencoder/`**:  it contains the script `Extractor 3_img_retrieval.py` for this method and the FAISS feature extraction index.	Furthermore, the `autoencoder_model.keras` is obtained once the script has been run and it is used during retrieval. In order to run it properly, directory should be changed as appropiate.		
+	- **`Extractor 4 - Raw Pixels/`**:  it contains the script `Extractor 4_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
+	- **`Extractor 5 - Color Histogram/`**:  it contains the script `Extractor 5_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
+		- **`Preprocessing/`**:  it contains the original dataset called Fruits and its preprocessed version once preprocessing script `Preprocessing_CBIR.py` has been run.  For  it  to  work  properly,  the  directory  must  be  changed  accordingly. The `db.csv` file is necessary for running the application as it has a column named *images* where all the dataset images names are for retrieval and indexing purposes.
+ - **`cbir_aapi`**: it contains all the necessary dependencies for running the application in a web interface.
+	- **`cbir_env`**: created virtual environment.	
+	- **`database`**:  it contains the FAISS feature extraction index for all methods and the `db.csv`.
+	- **`images`**:  it contains the original dataset images.
+	- **`app.py`**:  script `.py` for running the application web interface.
+	- **`codebook.npy`**:  codebook for BoW extractor.
+	- **`autoencoder_model.keras`**:  trained autoencoder model used in that extractor.
+	- **`requirements.txt`**: necessary dependencies to run the script `app.py`
+	
+## :notebook: Requirements
+
+
+
+- Python >= 3.8
+
+
+
+##  :package: Installation
+
+
+
+1. Clone this repository on your local machine:
+
+
+
+    ```bash
+
+    git clone https://github.com/rubykoom/CBIR_AAPI_2024.git
+
+    cd cbir
+
+    ```
+
+
+
+2. Create a virtual environment (optional but recommended):
+
+
+
+    ```bash
+
+    python -m venv cbir_env
+
+    ```
+
+
+
+    On Windows:
+
+    ```bash
+
+    cbir_env\Scripts\activate 
+
+    ```
+
+
+
+    On macOS/Linux:
+
+    ```bash
+
+    source cbir_env/bin/activate
+
+    ```
+
+
+
+3. Install the dependencies:
+
+
+
+    ```bash
+
+    pip install -r requirements.txt
+
+    ```
+
+
+
+## :zap: Execution
+
+To start the application, use the following command:
+
+```bash
+
+streamlit run app.py
+
+```
+
+![Web interface for CBIR](web.png)
+
+
+## :star: Authors
+- [Rubén Sánchez Fernández](https://github.com/rubykoom)
+- [Paula Velasco López](https://github.com/PauVL)
+```
