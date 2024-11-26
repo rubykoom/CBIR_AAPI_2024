@@ -29,7 +29,7 @@ This project implements a CBIR system using fruit images and various visual feat
 │   │   ├── Fruits_Preprocessed
 │   │   ├── db.csv
 │   │   └── Preprocessing_CBIR.py
-├── cbir
+├── cbir_aapi
 │   ├── database
 │   │   ├── db.csv
 │   │   ├── feat_extract_1
