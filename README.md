@@ -47,7 +47,6 @@ This project implements a CBIR system using fruit images and various visual feat
 
 ## :page_facing_up:Folder description
  - **`cbir_aapi`**: it contains all the necessary dependencies for running the application in a web interface.
-	- **`cbir_env`**: created virtual environment.	
 	- **`database`**:  it contains the FAISS feature extraction index for all methods and the `db.csv`.
 	- **`images`**:  it contains the original dataset images.
 	- **`app.py`**:  script `.py` for running the application web interface.
