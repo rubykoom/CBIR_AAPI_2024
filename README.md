@@ -47,7 +47,7 @@ This project implements a CBIR system using fruit images and various visual feat
 
 ## :page_facing_up:Folder description
  - **`cbir_aapi`**: it contains all the necessary dependencies for running the application in a web interface.
-	- **`database`**:  it contains the FAISS feature extraction index for all methods and the `db.csv`.
+	- **`database`**:  it contains the FAISS feature extraction indexes for all methods and the `db.csv`.
 	- **`images`**:  it contains the original dataset images.
 	- **`app.py`**:  script `.py` for running the application web interface.
 	- **`codebook.npy`**:  codebook for BoW extractor.
@@ -60,7 +60,11 @@ This project implements a CBIR system using fruit images and various visual feat
 	- **`Extractor 4 - Raw Pixels/`**:  it contains the script `Extractor 4_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
 	- **`Extractor 5 - Color Histogram/`**:  it contains the script `Extractor 5_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
 		- **`Preprocessing/`**:  it contains the original dataset called `Fruits` and its preprocessed version `Fruits_Preprocessed` once preprocessing script `Preprocessing_CBIR.py` has been run.  For  it  to  work  properly,  the  directory  must  be  changed  accordingly. The `db.csv` file is necessary for running the application as it has a column named *images* where all the dataset images names are for retrieval and indexing purposes.
-	
+
+
+⚠️ **Note**: To properly download large files using `Git Large File Storage (git lfs)`, ensure not to delete `.gitattributes` files in the repository. These guarantee the correct handling of large files, such as FAISS feature indexes.
+
+
 ## :notebook: Requirements
 
 
@@ -147,4 +151,5 @@ streamlit run app.py
 ## :star: Authors
 - [Rubén Sánchez Fernández](https://github.com/rubykoom)
 - [Paula Velasco López](https://github.com/PauVL)
-```
+
+
