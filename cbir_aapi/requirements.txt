@@ -7,6 +7,6 @@ numpy==1.26.4
 requests==2.27.1
 faiss-cpu==1.8.0
 matplotlib==3.7.1
-streamlit
+streamlit==1.40.0
 torch==2.4.1
 streamlit_cropper==0.2.2
