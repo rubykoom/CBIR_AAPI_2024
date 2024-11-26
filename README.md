@@ -42,18 +42,10 @@ This project implements a CBIR system using fruit images and various visual feat
 │   │   ├── Fruits_Preprocessed
 │   │   ├── db.csv
 │   │   └── Preprocessing_CBIR.py
-├── README.md
-└── web.png
+└── README.md
 ```
 
 ## :page_facing_up:Folder description
- - **`code/`**: it contains all the developed code for the project:
-	- **`Extractor 1 - CNN/`**:  it contains the script `Extractor 1_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
-	- **`Extractor 2 - BoW/`**:  it contains the script `Extractor 2_img_retrieval.py` for this method and the FAISS feature extraction index. Moreover, the `codebook.npy` is obtained once the script has been run and it is used during retrieval. In order to run it properly, directory should be changed as appropiate.		
-	- **`Extractor 3 - Autoencoder/`**:  it contains the script `Extractor 3_img_retrieval.py` for this method and the FAISS feature extraction index.	Furthermore, the `autoencoder_model.keras` is obtained once the script has been run and it is used during retrieval. In order to run it properly, directory should be changed as appropiate.		
-	- **`Extractor 4 - Raw Pixels/`**:  it contains the script `Extractor 4_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
-	- **`Extractor 5 - Color Histogram/`**:  it contains the script `Extractor 5_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
-		- **`Preprocessing/`**:  it contains the original dataset called Fruits and its preprocessed version once preprocessing script `Preprocessing_CBIR.py` has been run.  For  it  to  work  properly,  the  directory  must  be  changed  accordingly. The `db.csv` file is necessary for running the application as it has a column named *images* where all the dataset images names are for retrieval and indexing purposes.
  - **`cbir_aapi`**: it contains all the necessary dependencies for running the application in a web interface.
 	- **`cbir_env`**: created virtual environment.	
 	- **`database`**:  it contains the FAISS feature extraction index for all methods and the `db.csv`.
@@ -62,6 +54,13 @@ This project implements a CBIR system using fruit images and various visual feat
 	- **`codebook.npy`**:  codebook for BoW extractor.
 	- **`autoencoder_model.keras`**:  trained autoencoder model used in that extractor.
 	- **`requirements.txt`**: necessary dependencies to run the script `app.py`
+ - **`code/`**: it contains all the developed code for the project:
+	- **`Extractor 1 - CNN/`**:  it contains the script `Extractor 1_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
+	- **`Extractor 2 - BoW/`**:  it contains the script `Extractor 2_img_retrieval.py` for this method and the FAISS feature extraction index. Moreover, the `codebook.npy` is obtained once the script has been run and it is used during retrieval. In order to run it properly, directory should be changed as appropiate.		
+	- **`Extractor 3 - Autoencoder/`**:  it contains the script `Extractor 3_img_retrieval.py` for this method and the FAISS feature extraction index.	Furthermore, the `autoencoder_model.keras` is obtained once the script has been run and it is used during retrieval. In order to run it properly, directory should be changed as appropiate.		
+	- **`Extractor 4 - Raw Pixels/`**:  it contains the script `Extractor 4_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
+	- **`Extractor 5 - Color Histogram/`**:  it contains the script `Extractor 5_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
+		- **`Preprocessing/`**:  it contains the original dataset called Fruits and its preprocessed version once preprocessing script `Preprocessing_CBIR.py` has been run.  For  it  to  work  properly,  the  directory  must  be  changed  accordingly. The `db.csv` file is necessary for running the application as it has a column named *images* where all the dataset images names are for retrieval and indexing purposes.
 	
 ## :notebook: Requirements
 
@@ -83,7 +82,7 @@ This project implements a CBIR system using fruit images and various visual feat
 
     git clone https://github.com/rubykoom/CBIR_AAPI_2024.git
 
-    cd cbir
+    cd cbir_aapi
 
     ```
 
