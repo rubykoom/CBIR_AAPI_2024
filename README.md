@@ -5,6 +5,19 @@ This project implements a CBIR system using fruit images and various visual feat
 ##  :file_folder: File Structure
 ```
 .
+├── cbir_aapi
+│   ├── database
+│   │   ├── db.csv
+│   │   ├── feat_extract_1
+│   │   ├── feat_extract_2
+│   │   ├── feat_extract_3
+│   │   ├── feat_extract_4
+│   │   └── feat_extract_5
+│   ├── images
+│   ├── app.py
+│   ├── autoencoder_model.keras
+│   ├── codebook.npy
+│   └── requirements.txt
 ├── code
 │   ├── Extractor 1 - CNN
 │   │   ├── Extractor 1_img_retrieval.py
@@ -29,20 +42,8 @@ This project implements a CBIR system using fruit images and various visual feat
 │   │   ├── Fruits_Preprocessed
 │   │   ├── db.csv
 │   │   └── Preprocessing_CBIR.py
-├── cbir_aapi
-│   ├── database
-│   │   ├── db.csv
-│   │   ├── feat_extract_1
-│   │   ├── feat_extract_2
-│   │   ├── feat_extract_3
-│   │   ├── feat_extract_4
-│   │   └── feat_extract_5
-│   ├── images
-│   ├── app.py
-│   ├── autoencoder_model.keras
-│   ├── codebook.npy
-│   └── requirements.txt
-└── README.md
+├── README.md
+└── web.png
 ```
 
 ## :page_facing_up:Folder description
