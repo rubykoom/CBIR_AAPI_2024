@@ -77,15 +77,18 @@ This project implements a CBIR system using fruit images and various visual feat
 
 
 
-1. Clone this repository on your local machine:
+1. Clone this repository on your local machine and move into the folder `cbir_aapi` of your cloned repository:
 
 
 
     ```bash
 
     git clone https://github.com/rubykoom/CBIR_AAPI_2024.git
-
-    cd cbir_aapi
+    
+     ```
+    
+     ```bash
+    cd CBIR_AAPI_2024/cbir_aapi
 
     ```
 
