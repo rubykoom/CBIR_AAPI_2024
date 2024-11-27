@@ -43,7 +43,7 @@ This project implements a CBIR system using fruit images and various visual feat
 └── README.md
 ```
 
-## :page_facing_up:Folder description
+## :page_facing_up:Folder Description
  - **`cbir_aapi`**: it contains all the necessary dependencies for running the application in a web interface.
 	- **`database`**:  it contains the FAISS feature extraction indexes for all methods and the `db.csv`.
 	- **`images`**:  it contains the original dataset images.
@@ -145,7 +145,7 @@ To start the application, use the following command:
 streamlit run app.py
 
 ```
-Afterwards, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory.
+Afterwards, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory (see Folder Description section).
 
 The web interface has a movable red rectangle to select the area that will be used as the query in the retrieval of similar images.
 
