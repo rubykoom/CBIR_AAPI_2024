@@ -146,7 +146,7 @@ To start the application, use the following command:
 streamlit run app.py
 
 ```
-Afterward, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory.
+Afterwards, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory.
 
 
 ![Web interface for CBIR](web.png)
