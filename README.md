@@ -147,6 +147,7 @@ streamlit run app.py
 
 ```
 Afterwards, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory.
+The web interface has a movable red rectangle to select the area that will be used as the query in the retrieval of similar images.
 
 
 ![Web interface for CBIR](web.png)
