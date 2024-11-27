@@ -38,7 +38,6 @@ This project implements a CBIR system using fruit images and various visual feat
 │   │   ├── Extractor 5_img_retrieval.py
 │   │   └── feat_extract_5
 │   ├── Preprocessing
-│   │   ├── Fruits
 │   │   ├── Fruits_Preprocessed
 │   │   ├── db.csv
 │   │   └── Preprocessing_CBIR.py
@@ -59,7 +58,7 @@ This project implements a CBIR system using fruit images and various visual feat
 	- **`Extractor 3 - Autoencoder/`**:  it contains the script `Extractor 3_img_retrieval.py` for this method and the FAISS feature extraction index.	Furthermore, the `autoencoder_model.keras` is obtained once the script has been run and it is used during retrieval. In order to run it properly, directory should be changed as appropiate.		
 	- **`Extractor 4 - Raw Pixels/`**:  it contains the script `Extractor 4_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
 	- **`Extractor 5 - Color Histogram/`**:  it contains the script `Extractor 5_img_retrieval.py` for this method and the FAISS feature extraction index. In order to run it properly, directory should be changed as appropiate.	
-		- **`Preprocessing/`**:  it contains the original dataset called `Fruits` which you may download from [here](https://www.kaggle.com/datasets/kritikseth/fruit-and-vegetable-image-recognition/data)  and allocate in this directory. Moreover, it has its preprocessed version `Fruits_Preprocessed` once preprocessing script `Preprocessing_CBIR.py` has been run.  For  it  to  work  properly,  the  directory  must  be  changed  accordingly. The `db.csv` file is necessary for running the application as it has a column named *images* where all the dataset images names are for retrieval and indexing purposes.
+		- **`Preprocessing/`**:  the original dataset `Fruits`  may be download from [here](https://www.kaggle.com/datasets/kritikseth/fruit-and-vegetable-image-recognition/data)  and allocate in this directory. Moreover, it has its preprocessed version `Fruits_Preprocessed` once preprocessing script `Preprocessing_CBIR.py` has been run.  For  it  to  work  properly,  the  directory  must  be  changed  accordingly. The `db.csv` file is necessary for running the application as it has a column named *images* where all the dataset images names are for retrieval and indexing purposes.
 
 
 ⚠️ **Note**: To properly download large files using `Git Large File Storage (git lfs)`, ensure not to delete `.gitattributes` files in the repository. These guarantee the correct handling of large files, such as FAISS feature indexes.
@@ -147,6 +146,8 @@ To start the application, use the following command:
 streamlit run app.py
 
 ```
+Afterward, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory.
+
 
 ![Web interface for CBIR](web.png)
 
