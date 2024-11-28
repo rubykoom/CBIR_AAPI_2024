@@ -138,16 +138,16 @@ This project implements a CBIR system using fruit images and various visual feat
 
 ## :zap: Execution
 
-To start the application, use the following command:
+1. To start the application, use the following command:
 
 ```bash
 
 streamlit run app.py
 
 ```
-Afterwards, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory (see Folder Description section).
+2. Afterwards, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory (see Folder Description section).
 
-The web interface has a movable red rectangle to select the area that will be used as the query in the retrieval of similar images.
+The web interface features a movable red rectangle that allows users to select the region of the input image to be used as the query for retrieving similar images during the search process.
 
 
 ![Web interface for CBIR](web.png)
