@@ -46,7 +46,7 @@ This project implements a CBIR system using fruit images and various visual feat
 ## :page_facing_up:Folder Description
  - **`cbir_aapi`**: it contains all the necessary dependencies for running the application in a web interface.
 	- **`database`**:  it contains the FAISS feature extraction indexes for all methods and the `db.csv`.
-	- **`images`**:  it contains the original dataset images.
+	- **`images`**:  it contains the original dataset images which constitutes the database of the system.
 	- **`app.py`**:  script `.py` for running the application web interface.
 	- **`codebook.npy`**:  codebook for BoW extractor.
 	- **`autoencoder_model.keras`**:  trained autoencoder model used in that extractor.
