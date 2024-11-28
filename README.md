@@ -60,9 +60,6 @@ This project implements a CBIR system using fruit images and various visual feat
 		- **`Preprocessing/`**:  the original dataset `Fruits`  was obtained from [here](https://www.kaggle.com/datasets/kritikseth/fruit-and-vegetable-image-recognition/data). Moreover, the `Fruits_Preprocessed` folder can be download from this [link](https://drive.google.com/drive/folders/1KoMbRbtERIvbsUnwMG94ZrP0qmJUEJeI?usp=sharing), which must be placed in the specified directory so as to be used to test the application. Alternatively, the same folder will be created after running the `Preprocessing_CBIR.py` script, on condition that the original dataset `Fruits` folder is correctly located in the same directory. Inside the previous folder, the `Train` directory corresponds to the images used for creating the database system, and the `Test` directory contains the images that should be used as the queries. The `db.csv` file is necessary for running the application as it has a column named *images* where all the dataset images names are for retrieval and indexing purposes.
 
 
-⚠️ **Note**: To properly download large files using `Git Large File Storage (git lfs)`, ensure not to delete `.gitattributes` files in the repository. These guarantee the correct handling of large files, such as FAISS feature indexes.
-
-
 ## :notebook: Requirements
 
 
