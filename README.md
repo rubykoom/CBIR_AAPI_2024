@@ -64,7 +64,7 @@ This project implements a CBIR system using fruit images and various visual feat
 
 
 
-- Python >= 3.8
+- Python >= 3.10
 
 
 
