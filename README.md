@@ -144,7 +144,9 @@ streamlit run app.py
 ```
 2. Afterwards, you may try the application with the `Test` folder in the `Fruits_Preprocessed` directory (see `Preprocessing` point in the Folder Description section).
 
-The web interface features a movable red rectangle that allows users to select the region of the input image to be used as the query for retrieving similar images during the search process.
+The web interface features a movable red rectangle that allows users to select the region of the input image to be used as the query for retrieving similar images during the search process. 
+
+Another key aspect to consider is that sometimes moving the red rectangle provides better results in the evaluation metrics.
 
 
 ![Web interface for CBIR](web.png)
