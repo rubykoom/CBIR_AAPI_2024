@@ -152,8 +152,7 @@ Another key aspect to consider is that sometimes moving the red rectangle provid
 ![Web interface for CBIR](web.png)
 
 
-## :star: Authors
+## :star: Author
 - [Rubén Sánchez Fernández](https://github.com/rubykoom)
-- [Paula Velasco López](https://github.com/PauVL)
 
 
